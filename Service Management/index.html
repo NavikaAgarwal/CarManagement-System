@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Car Service Management</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="add_service.html">Add Service</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Scheduled Services</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Car ID</th>
+                    <th>Service Date</th>
+                    <th>Service Type</th>
+                    <th>Status</th>
+                    <th>Comments</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2024-12-01</td>
+                    <td>Engine Check</td>
+                    <td>Scheduled</td>
+                    <td>Needs oil change</td>
+                    <td><a href="update_service.html?service_id=1">Update</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2024-12-02</td>
+                    <td>Tire Replacement</td>
+                    <td>Completed</td>
+                    <td>Tires replaced</td>
+                    <td><a href="update_service.html?service_id=2">Update</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Kavisha Motors</p>
+    </footer>
+</body>
+</html>
