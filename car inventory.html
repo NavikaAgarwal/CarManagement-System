@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maruti Suzuki - Advanced Car Inventory</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .nav-tabs {
+            margin-top: 20px;
+        }
+        .card {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .tab-content {
+            margin-top: 20px;
+        }
+        .badge-sale {
+            background-color: #28a745;
+        }
+        .badge-service {
+            background-color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Kavisha Motor's Car Management System</h1>
+
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs" id="carTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="inventory-tab" data-bs-toggle="tab" data-bs-target="#inventory" type="button" role="tab">Inventory</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="sales-tab" data-bs-toggle="tab" data-bs-target="#sales" type="button" role="tab">Sales History</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="services-tab" data-bs-toggle="tab" data-bs-target="#services" type="button" role="tab">Service Records</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="carTabContent">
+            <!-- Inventory Tab -->
+            <div class="tab-pane fade show active" id="inventory" role="tabpanel" aria-labelledby="inventory-tab">
+                <div class="row">
+                    <!-- Example Car Card -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="baleno.jpg" class="card-img-top" alt="Car Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Suzuki Baleno</h5>
+                                <p class="card-text">Price: ₹5,25,000</p>
+                                <p class="card-text">Status: <span class="badge badge-sale">Sold</span></p>
+                                <button class="btn btn-primary btn-sm">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="swift.jpg" class="card-img-top" alt="Car Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Suzuki Swift</h5>
+                                <p class="card-text">Price: ₹6,00,000</p>
+                                <p class="card-text">Status: <span class="badge badge-sale">Available</span></p>
+                                <button class="btn btn-primary btn-sm">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="ciaz.jpg" class="card-img-top" alt="Car Image">
+                            <div class="card-body">
+                                <h5 class="card-title">Suzuki Ciaz</h5>
+                                <p class="card-text">Price: ₹8,75,000</p>
+                                <p class="card-text">Status: <span class="badge badge-sale">Sold</span></p>
+                                <button class="btn btn-primary btn-sm">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sales History Tab -->
+            <div class="tab-pane fade" id="sales" role="tabpanel" aria-labelledby="sales-tab">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Sale ID</th>
+                            <th>Car ID</th>
+                            <th>Sale Date</th>
+                            <th>Customer Name</th>
+                            <th>Sale Amount (₹)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example Sale Data -->
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2024-01-15</td>
+                            <td>Amit Sharma</td>
+                            <td>₹3,25,000</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2024-03-22</td>
+                            <td>Priya Verma</td>
+                            <td>₹6,00,000</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>2024-05-10</td>
+                            <td>Rahul Singh</td>
+                            <td>₹8,75,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Service Records Tab -->
+            <div class="tab-pane fade" id="services" role="tabpanel" aria-labelledby="services-tab">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Service ID</th>
+                            <th>Customer Name</th>
+                            <th>Service Date</th>
+                            <th>Service Type</th>
+                            <th>Duration (Minutes)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example Service Data -->
+                        <tr>
+                            <td>1</td>
+                            <td>Amit Sharma</td>
+                            <td>2024-06-10</td>
+                            <td>Maintenance</td>
+                            <td>60</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Priya Verma</td>
+                            <td>2024-07-15</td>
+                            <td>Repair</td>
+                            <td>120</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Rahul Singh</td>
+                            <td>2024-08-05</td>
+                            <td>Cleaning</td>
+                            <td>45</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

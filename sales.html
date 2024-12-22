@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Analytics - Kavisha Motors</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #ff0000;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        .sales-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .sales-table th, .sales-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .sales-table th {
+            background-color: #ff0000;
+            color: white;
+        }
+        .chart {
+            margin: 20px auto;
+            width: 80%;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #ff0000;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sales Analytics - Kavisha Motors</h1>
+        <p>Analyze and boost your sales performance with real-time data.</p>
+    </header>
+    <div class="container">
+        <h2>Sales Data (July - August 2024)</h2>
+        <table class="sales-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Model</th>
+                    <th>Units Sold</th>
+                    <th>Total Sales (INR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-07-05</td>
+                    <td>Swift</td>
+                    <td>10</td>
+                    <td>80,00,000</td>
+                </tr>
+                <tr>
+                    <td>2024-07-15</td>
+                    <td>Baleno</td>
+                    <td>15</td>
+                    <td>1,20,00,000</td>
+                </tr>
+                <tr>
+                    <td>2024-08-08</td>
+                    <td>Dzire</td>
+                    <td>8</td>
+                    <td>64,00,000</td>
+                </tr>
+                <tr>
+                    <td>2024-08-20</td>
+                    <td>Vitara Brezza</td>
+                    <td>12</td>
+                    <td>1,08,00,000</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="chart">
+            <h2>Sales Performance Chart</h2>
+            <p><em>(Chart Placeholder)</em></p>
+            <canvas id="salesChart" width="800" height="400"></canvas>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kavisha Motors. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Sales Data for Chart
+        const salesData = {
+            labels: ['Swift', 'Baleno', 'Dzire', 'Vitara Brezza'],
+            datasets: [{
+                label: 'Units Sold',
+                data: [10, 15, 8, 12],
+                backgroundColor: ['#ff6384', '#36a2eb', '#ffce56', '#4bc0c0'],
+            }]
+        };
+
+        // Chart Configuration
+        const config = {
+            type: 'bar',
+            data: salesData,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Sales Performance (July-August 2024)'
+                    }
+                }
+            },
+        };
+
+        // Render Chart
+        const salesChart = new Chart(
+            document.getElementById('salesChart'),
+            config
+        );
+    </script>
+</body>
+</html>
